@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Logo Platzi</title>
+    <style media="screen">
+      body{
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background: #234050;
+      }
+      .Platzi{
+        width: 100px;
+        display: block;
+        height: 100px;
+        position: relative;
+        margin: 40px auto;
+        /* background: green; */
+        border-radius: 20%;
+        transform: rotate(45deg);
+        animation-name: platzi-base;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+      }
+      .platzi-left{
+        width: 100%;
+        height: 65%;
+        border: 20px solid #97c93e;
+        border-bottom: none;
+        box-sizing: border-box;
+        position: relative;
+        top: 1px;
+        border-radius: 20px 20px 0 0;
+        transition: 2.5s;
+        animation-name: platzi-left;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: .5s;
+
+      }
+      .platzi-right{
+        width: 100%;
+        height: 35%;
+        border: 20px solid #97c93e;
+        border-top: none;
+        box-sizing: border-box;
+        border-radius: 0 0 20px 20px;
+      }
+
+      @keyframes platzi-base {
+        0%{
+          opacity: 0;
+          transform: scale(0.3) rotate(0deg);
+        }
+
+        30%{
+          opacity: 1;
+          transform: scale(1.2) rotate(405deg);
+        }
+
+        80%{
+          opacity: 1;
+          transform: scale(1.2) rotate(405deg);
+        }
+
+        100%{
+          opacity: 0;
+          transform: scale(0.3) rotate(0deg);
+
+        }
+      }
+
+      @keyframes platzi-left {
+        0%{
+          width: 100%;
+        }
+
+        58%{
+          width: 80%;
+        }
+        70%{
+          width: 100%;
+        }
+
+        100%{
+          width: 100%;
+        }
+      }
+      .carga{
+      position: relative;
+      right: 40%;
+      top: 20%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      }
+      .carga p{
+        font-size: 30px;
+        margin-right: 20px;
+        color: #97c93e;
+        font-weight: 400;
+        font-family: helvetica;
+      }
+      .carga span{
+        font-size: 40px;
+        margin: 0 10px;
+        color: #97c93e;
+      }
+      .p1{
+        animation-name: punto1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      .p2{
+        animation-name: punto2;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: .5s;
+      }
+      .p3{
+        animation-name: punto3;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+
+      }
+      @keyframes punto1 {
+        0%{
+          opacity: 1;
+        }
+        50%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+          animation-delay: .5s;
+        }
+      }
+
+      @keyframes punto2 {
+        0%{
+          opacity: 1;
+        }
+        50%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+          animation-delay: .5s;
+        }
+      }
+
+      @keyframes punto3 {
+        0%{
+          opacity: 1;
+        }
+        50%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+          animation-delay: .5s;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="Platzi">
+      <div class="platzi-left"></div>
+      <div class="platzi-right"></div>
+    </div>
+    <div class="carga">
+      <p>Por Favor Espere</p>
+      <span class="p1">.</span>
+      <span class="p2">.</span>
+      <span class="p3">.</span>
+    </div>
+  </body>
+</html>
